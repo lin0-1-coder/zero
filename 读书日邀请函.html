@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>把下午交给一本书 · 读书日邀请函</title>
+<link rel="icon" href="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%239FD4BF'/%3E%3Cpath d='M8 9c2.6-1 5.4-1 7 0v13c-1.6-1-4.4-1-7 0z' fill='%23FFFDF6' stroke='%233E352C' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M24 9c-2.6-1-5.4-1-7 0v13c1.6-1 4.4-1 7 0z' fill='%23FFFDF6' stroke='%233E352C' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+/* ===== 设计记号：纸页、手绘、粉彩 =====
+   纸 #FBF5E9 / 卡面 #FFFDF6 / 墨 #3E352C / 薄荷 #9FD4BF·#5FA98D
+   樱花 #F4B2BE / 鹅黄 #F7D27E / 雾蓝 #A9D2E4
+   标题：ZCOOL KuaiLe（圆头手写感） · 正文：Noto Sans SC
+*/
+:root{
+  --paper:#FBF5E9;
+  --card:#FFFDF6;
+  --card-2:#FBF4E4;
+  --ink:#3E352C;
+  --ink-2:#7C6B57;
+  --line:#E6D8C0;
+  --mint:#9FD4BF;
+  --mint-d:#519C80;
+  --blush:#F4B2BE;
+  --butter:#F7D27E;
+  --sky:#A9D2E4;
+  --shade:rgba(94,72,44,.5);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:16px;
+  line-height:1.85;
+  color:var(--ink);
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(1100px 640px at 6% -6%, rgba(247,210,126,.36), transparent 62%),
+    radial-gradient(900px 620px at 104% 102%, rgba(159,212,191,.36), transparent 62%),
+    radial-gradient(rgba(140,120,95,.085) 1px, transparent 1px);
+  background-size:auto,auto,24px 24px;
+  background-attachment:fixed,fixed,scroll;
+  padding:20px 14px 128px;
+  overflow-x:hidden;
+}
+img{max-width:100%}
+h1,h2,h3,h4{font-family:"ZCOOL KuaiLe","Noto Sans SC","PingFang SC",sans-serif;font-weight:400;margin:0;line-height:1.25}
+p{margin:0}
+button{font-family:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mint-d);outline-offset:3px;border-radius:8px}
+
+/* ===== 书的容器 ===== */
+.book{max-width:1180px;margin:0 auto}
+.view{
+  display:none;
+  position:relative;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:clamp(22px,5vw,54px);
+  box-shadow:0 26px 50px -38px var(--shade), 0 1px 0 #fff inset;
+  overflow:hidden;
+}
+.view.is-active{display:block;animation:pageIn .62s cubic-bezier(.22,.78,.28,1) both}
+.view.is-back{animation-name:pageInBack}
+@keyframes pageIn{
+  from{opacity:0;transform:perspective(1300px) rotateY(8deg) translateX(48px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+@keyframes pageInBack{
+  from{opacity:0;transform:perspective(1300px) rotateY(-8deg) translateX(-48px) scale(.985)}
+  to{opacity:1;transform:none}
+}
+.view::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:16px;
+  background:linear-gradient(90deg,rgba(228,214,190,.85),rgba(255,253,246,0));
+  border-radius:26px 0 0 26px;display:none;
+}
+@media (min-width:900px){.view::before{display:block}}
+.folio{
+  position:absolute;right:18px;bottom:14px;
+  font-family:"ZCOOL KuaiLe",sans-serif;font-size:13px;letter-spacing:.18em;
+  color:var(--ink-2);opacity:.75;
+}
+
+/* ===== 通用零件 ===== */
+.kicker{display:inline-block;font-size:13px;letter-spacing:.14em;color:var(--mint-d);transform:rotate(-1.5deg)}
+.h2{font-size:clamp(26px,5.2vw,44px);color:var(--ink)}
+.h2 .hl{
+  white-space:nowrap;
+  background-image:linear-gradient(transparent 58%,rgba(247,210,126,.64) 58%,rgba(247,210,126,.64) 93%,transparent 93%);
+  padding:0 .06em;
+}
+.lead{margin-top:12px;color:var(--ink-2);font-size:15.5px;max-width:40em;line-height:1.95}
+.note{font-size:13.5px;color:var(--ink-2);line-height:1.8}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:46px;padding:0 22px;border-radius:999px;
+  border:2px solid var(--ink);background:var(--butter);
+  font-size:15px;font-weight:700;cursor:pointer;
+  box-shadow:3px 4px 0 rgba(62,53,44,.9);
+  transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+.btn:hover{transform:translate(-1px,-2px);box-shadow:5px 6px 0 rgba(62,53,44,.9)}
+.btn:active{transform:translate(2px,3px);box-shadow:1px 1px 0 rgba(62,53,44,.9)}
+.btn--mint{background:var(--mint)}
+.btn--ghost{background:#fff}
+.btn--sm{min-height:40px;padding:0 16px;font-size:14px;box-shadow:2px 3px 0 rgba(62,53,44,.85)}
+.card{
+  background:#FFFEF9;border:1px dashed var(--line);border-radius:18px;
+  padding:18px 20px;box-shadow:5px 6px 0 rgba(231,217,193,.55);
+}
+.shot{
+  margin:0;border-radius:18px;overflow:hidden;background:#fff;
+  border:5px solid #fff;
+  box-shadow:0 16px 30px -22px rgba(90,68,40,.62), 0 0 0 1px var(--line);
+  transform:rotate(-1.2deg);
+}
+.shot img{display:block;width:100%;height:100%;object-fit:cover}
+.shot--169{aspect-ratio:16/9}
+.shot--43{aspect-ratio:4/3}
+.shot--32{aspect-ratio:3/2}
+.shot--wide{aspect-ratio:21/8}
+.shot--flat{aspect-ratio:16/10}
+.shot figcaption{
+  background:#fff;color:var(--ink-2);font-size:12.5px;line-height:1.6;
+  padding:8px 10px;text-align:center;
+}
+.sticker{
+  width:100px;height:100px;border-radius:50%;padding:3px;
+  background:var(--card);border:3px dashed var(--mint);transform:rotate(6deg);
+  flex:0 0 auto;
+}
+.sticker img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.tape{
+  position:absolute;width:86px;height:22px;background:rgba(247,210,126,.72);
+  border-left:1px dashed rgba(255,255,255,.65);border-right:1px dashed rgba(255,255,255,.65);
+  box-shadow:0 2px 6px rgba(120,95,60,.14);
+}
+.icon{width:22px;height:22px;flex:0 0 auto;color:var(--mint-d)}
+.icon--ink{color:var(--ink)}
+.split{display:grid;grid-template-columns:1fr;gap:26px;align-items:center}
+@media (min-width:900px){
+  .split{grid-template-columns:1.02fr .98fr;gap:42px}
+  .split--rev .split-text{order:2}
+}
+
+/* ===== 01 封面 ===== */
+.cover{display:grid;grid-template-columns:1fr;gap:26px}
+@media (min-width:900px){.cover{grid-template-columns:1.04fr .96fr;gap:44px;align-items:center}}
+.cover-title{
+  font-size:clamp(38px,10.5vw,76px);line-height:1.1;letter-spacing:.02em;
+  margin:10px 0 0;color:var(--ink);
+}
+.cover-title span{display:block}
+.cover-title .t2{color:var(--mint-d)}
+.squiggle{display:block;width:min(230px,52%);height:16px;margin:10px 0 0;color:var(--blush)}
+.cover-sub{margin-top:16px;font-size:15.5px;color:var(--ink-2);line-height:1.95;max-width:22em}
+.cover-meta{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}
+@media (min-width:560px){.cover-meta{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.chip{
+  background:#FFFEF9;border:1px solid var(--line);border-radius:14px;
+  padding:10px 12px;box-shadow:3px 4px 0 rgba(231,217,193,.6);
+}
+.chip:nth-child(1){transform:rotate(-1.4deg)}
+.chip:nth-child(2){transform:rotate(.9deg)}
+.chip:nth-child(3){transform:rotate(-.6deg)}
+.chip .k{display:block;font-size:11.5px;letter-spacing:.12em;color:var(--mint-d)}
+.chip .v{display:block;font-size:14.5px;font-weight:700;line-height:1.5;margin-top:2px}
+.chip .s{display:block;font-size:12px;color:var(--ink-2);font-weight:400}
+.cover-visual{position:relative;padding:6px 0 0}
+.cover-visual .tape{top:-8px;left:22%;transform:rotate(-5deg)}
+.cover-visual .sticker{position:absolute;left:-6px;bottom:-22px;z-index:3}
+.stamp{
+  width:104px;height:104px;border-radius:50%;border:3px double var(--mint-d);
+  background:rgba(159,212,191,.14);color:var(--mint-d);
+  display:grid;place-items:center;gap:0;cursor:pointer;
+  font-family:"ZCOOL KuaiLe",sans-serif;line-height:1.1;
+  transform:rotate(-11deg);padding:0;margin-top:22px;
+  transition:background .2s ease;
+}
+.stamp b{font-size:22px;letter-spacing:.06em}
+.stamp small{font-size:10.5px;letter-spacing:.16em}
+.stamp:hover{background:rgba(159,212,191,.26)}
+.stamp.is-pressed{animation:stampPress .55s ease both}
+@keyframes stampPress{
+  0%{transform:rotate(-11deg) scale(1.6);opacity:.15}
+  55%{transform:rotate(-11deg) scale(.9)}
+  100%{transform:rotate(-11deg) scale(1);opacity:1}
+}
+.swipe-hint{
+  margin-top:16px;font-size:12.5px;color:var(--ink-2);
+  display:inline-flex;align-items:center;gap:6px;
+}
+
+/* ===== 02 信 ===== */
+.letter{
+  position:relative;background:linear-gradient(180deg,#FFFEF8,#FDF7E9);
+  border:1px solid var(--line);border-radius:20px;
+  padding:26px 22px 24px;box-shadow:6px 8px 0 rgba(231,217,193,.6);
+}
+.letter .tape{top:-12px;left:50%;margin-left:-43px;transform:rotate(-2deg)}
+.letter .hi{font-family:"ZCOOL KuaiLe",sans-serif;font-size:21px;margin-bottom:10px}
+.letter p{margin-bottom:14px;line-height:2.05;font-size:15.5px}
+.letter p:last-of-type{margin-bottom:0}
+.letter .sign{
+  margin-top:20px;font-family:"ZCOOL KuaiLe",sans-serif;font-size:24px;
+  color:var(--mint-d);transform:rotate(-2deg);display:inline-block;
+}
+.letter .sign-meta{font-size:12.5px;color:var(--ink-2);margin-top:4px}
+
+/* ===== 03 卡片（可翻面） ===== */
+.flip{perspective:1400px;margin-top:22px}
+.flip-inner{position:relative;transition:transform .75s cubic-bezier(.4,.1,.2,1);transform-style:preserve-3d}
+.flip.is-back .flip-inner{transform:rotateY(180deg)}
+.flip-face{
+  background:#FFFEF9;border:1px solid var(--line);border-radius:20px;
+  padding:22px;box-shadow:6px 8px 0 rgba(231,217,193,.55);
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+}
+.flip-front .head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:1px dashed var(--line);padding-bottom:10px;margin-bottom:6px;
+}
+.flip-front .head h3{font-size:20px}
+.flip-front .head span{font-size:11.5px;letter-spacing:.14em;color:var(--mint-d)}
+.fact{display:grid;grid-template-columns:68px 1fr;gap:8px;padding:11px 0;border-bottom:1px dashed rgba(230,216,192,.85)}
+.fact:last-child{border-bottom:0;padding-bottom:2px}
+.fact .k{font-size:13px;color:var(--mint-d);letter-spacing:.06em;padding-top:2px}
+.fact .v{font-size:15px;line-height:1.7;font-weight:500}
+.fact .v small{display:block;font-weight:400;color:var(--ink-2);font-size:12.5px}
+.flip-back{
+  position:absolute;inset:0;transform:rotateY(180deg);
+  background:linear-gradient(160deg,#FDF7E9,#FFFDF6);
+  display:flex;flex-direction:column;justify-content:center;gap:12px;
+}
+.flip-back .mark{font-family:"ZCOOL KuaiLe",sans-serif;color:var(--mint-d);font-size:15px;letter-spacing:.1em}
+.flip-back p{line-height:1.95;font-size:15px}
+.flip-ctrl{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+
+/* ===== 04 顺序 ===== */
+.tl{margin-top:24px}
+.tl-item{display:grid;grid-template-columns:38px 20px minmax(0,1fr);column-gap:12px}
+.tl-item .num{
+  font-family:"ZCOOL KuaiLe",sans-serif;font-size:17px;color:var(--mint-d);
+  padding-top:9px;letter-spacing:.04em;
+}
+.tl-item .rail{position:relative}
+.tl-item .rail::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+  transform:translateX(-50%);
+  background:repeating-linear-gradient(to bottom,var(--mint) 0 7px,transparent 7px 14px);
+}
+.tl-item:first-child .rail::before{top:16px}
+.tl-item:last-child .rail::before{bottom:auto;height:17px}
+.tl-item .dot{
+  position:absolute;left:50%;top:14px;width:12px;height:12px;
+  transform:translateX(-50%);border-radius:50%;
+  background:var(--butter);border:2px solid var(--ink);z-index:2;
+}
+.tl-item .body{padding:6px 0 26px;min-width:0}
+.tl-item .body h3{font-size:19px;margin-bottom:2px}
+.tl-item .body p{font-size:14.5px;color:var(--ink-2);line-height:1.85}
+.tl-item .body .tag{
+  display:inline-block;margin-top:8px;font-size:12px;padding:2px 10px;border-radius:999px;
+  background:rgba(159,212,191,.28);color:#376B57;
+}
+/* ===== 05 带一本书来 ===== */
+.trio{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+@media (min-width:820px){.trio{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.trio .card{padding-top:16px;min-width:0}
+.trio .card:nth-child(1){transform:rotate(-1.2deg)}
+.trio .card:nth-child(2){transform:rotate(.9deg)}
+.trio .card:nth-child(3){transform:rotate(-.6deg)}
+.trio .ic{width:32px;height:32px;color:var(--mint-d);display:block;margin-bottom:8px}
+.trio h3{font-size:17.5px;margin-bottom:6px}
+.trio p{font-size:14px;color:var(--ink-2);line-height:1.85}
+.small-card{margin-top:18px;background:rgba(247,210,126,.2);border:1px solid rgba(217,180,98,.55);border-radius:16px;padding:14px 18px}
+.small-card p{font-size:13.5px;line-height:1.85;color:#6C5637}
+
+/* ===== 06 小环节 + 抽签 ===== */
+.draw{
+  margin-top:28px;background:linear-gradient(168deg,#FFFDF6,#FBF4E4);
+  border:1px solid var(--line);border-radius:20px;padding:22px;
+  box-shadow:5px 6px 0 rgba(231,217,193,.5);display:grid;gap:18px;
+}
+@media (min-width:780px){.draw{grid-template-columns:1fr 250px;align-items:center;gap:26px}}
+.draw h3{font-size:20px}
+.draw .note{margin-top:6px}
+.draw-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.pick{
+  min-height:158px;border-radius:16px;border:2px dashed var(--mint-d);background:#fff;
+  display:grid;place-items:center;text-align:center;padding:18px 16px;
+  transform:rotate(-2deg);font-family:"ZCOOL KuaiLe",sans-serif;font-size:17px;
+  line-height:1.7;color:var(--ink);
+}
+.pick.is-pop{animation:pickPop .5s cubic-bezier(.2,1.1,.3,1) both}
+@keyframes pickPop{
+  0%{transform:rotate(-2deg) scale(.9);opacity:.4}
+  60%{transform:rotate(1.4deg) scale(1.04)}
+  100%{transform:rotate(-2deg) scale(1);opacity:1}
+}
+.pick .empty{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;color:var(--ink-2);line-height:1.8}
+
+/* ===== 07 小提醒 ===== */
+.tips{margin-top:22px;display:grid;gap:10px}
+.tip{
+  display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start;
+  background:#FFFEF9;border:1px solid var(--line);border-radius:16px;
+  padding:13px 16px;box-shadow:3px 4px 0 rgba(231,217,193,.45);
+}
+.tip:nth-child(even){transform:rotate(-.5deg)}
+.tip:nth-child(1){transform:rotate(.6deg)}
+.tip .badge{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(159,212,191,.26);color:#39705B;
+}
+.tip h3{font-size:16px;margin-bottom:2px}
+.tip p{font-size:13.5px;color:var(--ink-2);line-height:1.75}
+
+/* ===== 08 回执 ===== */
+.rsvp{display:grid;grid-template-columns:1fr;gap:24px;margin-top:24px}
+@media (min-width:880px){.rsvp{grid-template-columns:1fr 330px;align-items:start;gap:34px}}
+.form{
+  background:#FFFEF9;border:1px solid var(--line);border-radius:20px;padding:22px;
+  box-shadow:5px 6px 0 rgba(231,217,193,.5);
+}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13.5px;color:var(--mint-d);letter-spacing:.06em;margin-bottom:6px}
+.field input{
+  width:100%;min-height:48px;padding:10px 14px;font-size:16px;font-family:inherit;
+  color:var(--ink);background:#FFFDF6;border:2px solid var(--line);border-radius:12px;
+  transition:border-color .16s ease, box-shadow .16s ease;
+}
+.field input::placeholder{color:#B8A992}
+.field input:focus{outline:none;border-color:var(--mint-d);box-shadow:0 0 0 4px rgba(159,212,191,.3)}
+.field.is-warn input{border-color:#DC93A0;animation:shake .4s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.msg{font-size:12.5px;color:#BE5F70;margin-top:6px;min-height:1.2em;line-height:1.6}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chipbtn{
+  min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid var(--line);
+  background:#FFFDF6;font-size:14px;cursor:pointer;
+  transition:background .16s ease,border-color .16s ease,color .16s ease;
+}
+.chipbtn[aria-pressed="true"]{background:rgba(159,212,191,.34);border-color:var(--mint-d);color:#2F6A55;font-weight:700}
+.ticket{
+  position:relative;background:linear-gradient(175deg,#FFFEF8,#FBF4E4);
+  border:2px dashed var(--mint-d);border-radius:18px;padding:18px 20px 16px;
+  transform:rotate(-1.2deg);box-shadow:4px 5px 0 rgba(231,217,193,.6);
+  min-height:248px;display:flex;flex-direction:column;
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;width:16px;height:16px;border-radius:50%;
+  background:var(--paper);top:52%;
+}
+.ticket::before{left:-9px;box-shadow:inset 0 0 0 1px var(--line)}
+.ticket::after{right:-9px;box-shadow:inset 0 0 0 1px var(--line)}
+.ticket .t-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--line);padding-bottom:8px;margin-bottom:12px}
+.ticket .t-head h3{font-size:18px}
+.ticket .t-head span{font-size:11px;letter-spacing:.14em;color:var(--mint-d)}
+.ticket .name-line{
+  font-family:"ZCOOL KuaiLe",sans-serif;font-size:26px;line-height:1.4;color:var(--ink);
+  border-bottom:2px dashed var(--line);padding-bottom:4px;margin-bottom:10px;
+  min-height:46px;word-break:break-all;
+}
+.ticket .t-row{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;padding:4px 0;color:var(--ink-2)}
+.ticket .t-row b{color:var(--ink);font-size:14.5px;font-family:"ZCOOL KuaiLe",sans-serif;letter-spacing:.04em}
+.ticket .empty-hint{font-size:12.5px;color:var(--ink-2);line-height:1.8;margin-top:auto;padding-right:76px}
+.ticket .seal{
+  position:absolute;right:16px;bottom:14px;width:76px;height:76px;border-radius:50%;
+  border:3px double #D2798A;color:#C9697C;display:grid;place-items:center;
+  font-family:"ZCOOL KuaiLe",sans-serif;font-size:11px;line-height:1.35;text-align:center;
+  transform:rotate(-14deg) scale(.55);opacity:0;
+  transition:transform .45s cubic-bezier(.2,1.5,.4,1), opacity .3s ease;
+}
+.ticket.is-stamped .seal{opacity:1;transform:rotate(-14deg) scale(1)}
+.end-sign{margin-top:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.end-sign .sig{font-family:"ZCOOL KuaiLe",sans-serif;font-size:25px;color:var(--mint-d);transform:rotate(-3deg)}
+.end-sign .date{font-size:12.5px;color:var(--ink-2)}
+.end-shot{margin-top:18px}
+.site-note{margin-top:14px;font-size:12px;color:var(--ink-2);line-height:1.8}
+
+/* ===== 翻页条 ===== */
+.nav{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:50;
+  display:flex;align-items:center;gap:4px;padding:6px;
+  background:#FFFDF6;border:1px solid var(--line);border-radius:999px;
+  box-shadow:0 16px 34px -22px rgba(80,60,35,.55), 0 2px 0 rgba(255,255,255,.9) inset;
+}
+.nav-btn{
+  width:46px;height:46px;border-radius:50%;border:2px solid var(--line);
+  background:#FFFDF6;display:grid;place-items:center;cursor:pointer;
+  transition:transform .16s ease,background .16s ease,border-color .16s ease;
+}
+.nav-btn:hover{background:var(--butter);border-color:var(--ink);transform:translateY(-1px)}
+.nav-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;background:#FFFDF6;border-color:var(--line)}
+.nav-mid{
+  border:0;background:transparent;cursor:pointer;min-height:46px;padding:0 14px;
+  font-family:"ZCOOL KuaiLe",sans-serif;font-size:16px;letter-spacing:.04em;
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;
+}
+.nav-mid:hover{background:#FBF3E4}
+.nav-count{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.08em;color:var(--ink-2)}
+
+/* ===== 目录 ===== */
+.toc{position:fixed;inset:0;z-index:70;display:none;place-items:center;padding:18px;background:rgba(62,53,44,.34)}
+.toc.is-open{display:grid}
+.toc-card{
+  width:100%;max-width:430px;max-height:82vh;overflow:auto;background:var(--card);
+  border:1px solid var(--line);border-radius:24px;padding:20px 20px 16px;
+  box-shadow:0 26px 60px -30px rgba(62,53,44,.6);animation:tocIn .3s ease both;
+}
+@keyframes tocIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.toc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.toc-head h3{font-size:20px}
+.toc-close{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#FFFDF6;display:grid;place-items:center;cursor:pointer}
+.toc-close:hover{background:var(--butter)}
+.toc-list{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.toc-item{
+  width:100%;display:flex;align-items:center;gap:12px;min-height:46px;
+  border:0;background:transparent;text-align:left;cursor:pointer;
+  padding:6px 10px;border-radius:12px;font-size:14.5px;transition:background .16s ease;
+}
+.toc-item:hover{background:#FBF3E4}
+.toc-item .n{font-family:"ZCOOL KuaiLe",sans-serif;color:var(--mint-d);width:22px;flex:0 0 auto;font-size:15px}
+.toc-item.is-cur{background:rgba(159,212,191,.26);font-weight:700}
+
+/* ===== 提示条 ===== */
+.toast{
+  position:fixed;left:50%;bottom:90px;transform:translate(-50%,14px);z-index:80;
+  background:var(--ink);color:#FFF9EC;font-size:13.5px;line-height:1.6;
+  padding:10px 18px;border-radius:999px;max-width:88vw;text-align:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .25s ease, transform .25s ease;
+  box-shadow:0 10px 24px -14px rgba(0,0,0,.5);
+}
+.toast.is-show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion: reduce){
+  .view.is-active{animation:none}
+  .flip-inner{transition:none}
+  .pick.is-pop{animation:none}
+  .ticket .seal{transition:none}
+  .toast{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="book" id="book">
+
+<!-- ===== 视图 01：封面 ===== -->
+<section class="view is-active" data-title="封面" aria-label="封面">
+  <div class="cover">
+    <div class="cover-text">
+      <span class="kicker">2026 校园读书日 · 邀请函</span>
+      <h1 class="cover-title"><span>把下午</span><span class="t2">交给一本书</span></h1>
+      <svg class="squiggle" viewBox="0 0 230 16" aria-hidden="true" fill="none">
+        <path d="M2 11C34 3 62 3 96 9S170 14 228 4" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <p class="cover-sub">十一月十七日，图书馆二楼。带上你想读的那一本，或者空手来，我们留一个下午给纸页。</p>
+      <div class="cover-meta">
+        <div class="chip"><span class="k">时间</span><span class="v">2026.11.17<span class="s">星期二 · 下午</span></span></div>
+        <div class="chip"><span class="k">地点</span><span class="v">图书馆二楼<span class="s">成都艺术职业大学</span></span></div>
+        <div class="chip"><span class="k">组织人</span><span class="v">铃铃铃玲<span class="s">等你来占个座位</span></span></div>
+      </div>
+      <button class="stamp" id="stampBtn" type="button" aria-label="点击给邀请函盖章">
+        <b>11.17</b><small>点我盖章</small>
+      </button>
+      <p class="swipe-hint">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12h16M15 7l5 5-5 5"/></svg>
+        用 ← → 键翻页，或点底部的箭头
+      </p>
+    </div>
+    <div class="cover-visual">
+      <div class="tape" aria-hidden="true"></div>
+      <figure class="shot shot--169">
+        <img src="assets/hero-book-cat.jpg" alt="午后阳光里，一本摊开的绘本上趴着一只打盹的橘猫，旁边有茶杯和一小盆绿植" width="1600" height="900">
+      </figure>
+      <div class="sticker" aria-hidden="true">
+        <img src="assets/mascot-page.jpg" alt="" width="300" height="300">
+      </div>
+    </div>
+  </div>
+  <span class="folio">01</span>
+</section>
+
+<!-- ===== 视图 02：一封信 ===== -->
+<section class="view" data-title="一封信" aria-label="一封信">
+  <div class="split">
+    <div class="split-text">
+      <span class="kicker">先读一小段话</span>
+      <h2 class="h2">一封短短的<span class="hl">邀请信</span></h2>
+      <div class="note" style="margin-top:10px">写给每个把书塞进书包、又总没空翻开的人。</div>
+      <div class="letter" style="margin-top:22px">
+        <div class="tape" aria-hidden="true"></div>
+        <div class="hi">亲爱的你：</div>
+        <p>十一月了，你的书还停在第七页吗。</p>
+        <p>作业、消息、课上到一半响起来的群通知，把一天切得很碎。所以我想留一个下午，把它们先放到一边：十一月十七日，图书馆二楼，找一张桌子坐下，读一会儿书。</p>
+        <p>不用准备发言稿，不用读完一整本，也不用非得带书来——只是来坐一会儿，也很好。</p>
+        <p>读完一段抬头看看窗外，是允许的。</p>
+        <span class="sign">铃铃铃玲</span>
+        <div class="sign-meta">2026 年 11 月 17 日 · 成都艺术职业大学图书馆二楼</div>
+      </div>
+    </div>
+    <div class="split-visual">
+      <figure class="shot shot--43">
+        <img src="assets/girl-reading.jpg" alt="短发女生坐在窗边旧木桌前安静看书，秋日阳光落在书页上" width="1200" height="900">
+        <figcaption>窗边那张桌子，通常下午最好看</figcaption>
+      </figure>
+    </div>
+  </div>
+  <span class="folio">02</span>
+</section>
+
+<!-- ===== 视图 03：活动小卡 ===== -->
+<section class="view" data-title="活动小卡" aria-label="活动小卡">
+  <div class="split split--rev">
+    <div class="split-text">
+      <span class="kicker">想知道的都在这一张</span>
+      <h2 class="h2">一张<span class="hl">小小的心意卡</span></h2>
+      <p class="lead">点一下卡片可以翻到背面，背面写了一句留给你自己的话。</p>
+      <div class="flip" id="factFlip">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="head"><h3>读书日 · 活动卡</h3><span>INVITATION</span></div>
+            <div class="fact"><div class="k">活动</div><div class="v">一起读一个下午<small>校园读书日 · 静读、换书、手作书签</small></div></div>
+            <div class="fact"><div class="k">日期</div><div class="v">2026 年 11 月 17 日<small>星期二 · 下午</small></div></div>
+            <div class="fact"><div class="k">地点</div><div class="v">成都艺术职业大学 · 图书馆二楼<small>进门上一层，靠窗那排</small></div></div>
+            <div class="fact"><div class="k">组织人</div><div class="v">铃铃铃玲</div></div>
+            <div class="fact"><div class="k">带上</div><div class="v">一本书、水杯、一件外套<small>书可以不带，其余两样真的有用</small></div></div>
+          </div>
+          <div class="flip-face flip-back">
+            <span class="mark">背面 · 写给你</span>
+            <p>如果那天你只想来坐十分钟，也欢迎。书可以带回去，也可以留在图书馆二楼的漂流角，等下一个翻开它的人。</p>
+            <p class="note">不必读完，不必喜欢，不必有用。读书这件事，本来就只对自己负责。</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-ctrl">
+        <button class="btn btn--sm btn--mint" id="flipBtn" type="button" aria-pressed="false">翻到背面</button>
+        <span class="note">卡片会转过来</span>
+      </div>
+    </div>
+    <div class="split-visual">
+      <figure class="shot shot--32">
+        <img src="assets/library-floor2.jpg" alt="温暖的图书馆二楼阅读空间：木质书架、靠窗长桌、圆形地毯和垂吊绿植" width="1500" height="1000">
+        <figcaption>图书馆二楼 · 靠窗的阅读区</figcaption>
+      </figure>
+    </div>
+  </div>
+  <span class="folio">03</span>
+</section>
+
+<!-- ===== 视图 04：那天的顺序 ===== -->
+<section class="view" data-title="那天的顺序" aria-label="那天的顺序">
+  <div class="split">
+    <div class="split-text">
+      <span class="kicker">那天下午，大概是这样</span>
+      <h2 class="h2">五个<span class="hl">不用紧张的环节</span></h2>
+      <p class="lead">顺序是这样，时间松一点也没关系。想一直读下去，就一直在那儿读。</p>
+      <div class="tl" id="timeline">
+        <div class="tl-item">
+          <div class="num">01</div>
+          <div class="rail" aria-hidden="true"><div class="dot"></div></div>
+          <div class="body"><h3>入场 · 挑一枚书签</h3><p>二楼门口签到，桌上摆着一罐手作书签，挑你喜欢的那枚。</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="num">02</div>
+          <div class="rail" aria-hidden="true"><div class="dot"></div></div>
+          <div class="body"><h3>静读 · 把手机翻过来</h3><p>找一张桌子坐下，翻开你带来的书，慢慢读，读多久都行。</p><span class="tag">这段最重要</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="num">03</div>
+          <div class="rail" aria-hidden="true"><div class="dot"></div></div>
+          <div class="body"><h3>以书换书</h3><p>把书放到长桌上，抽签配对，带走一本别人读过、觉得值得的书。</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="num">04</div>
+          <div class="rail" aria-hidden="true"><div class="dot"></div></div>
+          <div class="body"><h3>手作一枚书签</h3><p>干花、彩绳、彩纸都在，做一枚属于自己的，做完直接夹进书里。</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="num">05</div>
+          <div class="rail" aria-hidden="true"><div class="dot"></div></div>
+          <div class="body"><h3>写一句话就走</h3><p>在留言墙上写一句，给下一个翻开这本书的人。然后，回家吃饭。</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="split-visual">
+      <figure class="shot shot--43" style="transform:rotate(1.1deg)">
+        <img src="assets/craft-bookmark.jpg" alt="桌面上摊着手作书签的材料：彩纸、彩铅、干花、彩绳、剪刀和胶水，两枚做好的书签" width="1500" height="1000">
+        <figcaption>第四环节的材料，已经铺好了</figcaption>
+      </figure>
+    </div>
+  </div>
+  <span class="folio">04</span>
+</section>
+
+<!-- ===== 视图 05：带一本书来 ===== -->
+<section class="view" data-title="带一本书来" aria-label="带一本书来">
+  <div class="split split--rev">
+    <div class="split-text">
+      <span class="kicker">带不带都可以</span>
+      <h2 class="h2">带一本书来，<span class="hl">或者空手来</span></h2>
+      <p class="lead">不用挑什么了不起的书。下面这三种，哪一种都很好：</p>
+      <div class="trio">
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h12v16l-6-4-6 4z"/></svg>
+          <h3>读了三遍的那本</h3>
+          <p>你熟到能背出某一句，正好可以推荐给下一个人。</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5.5-13 14-13 0 8-5 13.5-14 13"/><path d="M5 19c3-4.5 6-7 9.5-8"/></svg>
+          <h3>只读了开头的那本</h3>
+          <p>一直搁着也没关系，换一个人，说不定就读下去了。</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>
+          <h3>封面好看的那本</h3>
+          <p>说不清当初为什么买，但它在书架上确实很好看。</p>
+        </div>
+      </div>
+      <div class="small-card">
+        <p>带来的书会贴上一枚「交换中」的小贴纸。活动结束后可以带回去，也可以留在二楼的漂流角，等下一个翻开它的人。</p>
+      </div>
+    </div>
+    <div class="split-visual">
+      <figure class="shot shot--32">
+        <img src="assets/carry-bag-books.jpg" alt="格子布上放着一摞粉彩封面的书、米色帆布袋和水杯，摊开的书里夹着一枚叶子书签" width="1500" height="1000">
+        <figcaption>一本书、一个水杯、一件外套</figcaption>
+      </figure>
+    </div>
+  </div>
+  <span class="folio">05</span>
+</section>
+
+<!-- ===== 视图 06：三个小环节 ===== -->
+<section class="view" data-title="三个小环节" aria-label="三个小环节">
+  <div class="split">
+    <div class="split-text">
+      <span class="kicker">都不用开口讲话，也都能参加</span>
+      <h2 class="h2">三个<span class="hl">不尴尬的小环节</span></h2>
+      <p class="lead">如果你有点怕生，也没关系。这三个环节，站着看别人玩也算参加了。</p>
+      <div class="trio">
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h11v11H4z"/><path d="M15 9h3.5a1.5 1.5 0 0 1 0 3H15"/><path d="M7 10.5h5"/></svg>
+          <h3>以书换书</h3>
+          <p>一人一本放上长桌，抽签配对，拿走别人的心头好。</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h9l-1.5 8.5H5z"/><path d="M9.5 12.5v7"/><path d="M17 5c2 2.4 3 4.6 3 7-2-.6-3.5-1.6-4.5-3.2"/></svg>
+          <h3>手作书签</h3>
+          <p>干花、彩绳、彩纸都备好了，做一枚夹进你的书里。</p>
+        </div>
+        <div class="card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M8 9h8M8 12h5"/><path d="M9 16v3l3-3"/></svg>
+          <h3>留言墙</h3>
+          <p>写一句给下一个翻开这本书的人，贴上去就行。</p>
+        </div>
+      </div>
+    </div>
+    <div class="split-visual" style="position:relative">
+      <figure class="shot shot--32" style="transform:rotate(1deg)">
+        <img src="assets/book-swap.jpg" alt="图书馆长桌两端，两个女生把各自的书递向对方交换，背景是暖光里的书架" width="1500" height="1000">
+        <figcaption>换书的时候，说一句「这本很好看」就够了</figcaption>
+      </figure>
+      <div class="sticker" aria-hidden="true" style="position:absolute;right:-8px;bottom:-26px;width:88px;height:88px">
+        <img src="assets/mascot-page.jpg" alt="" width="300" height="300">
+      </div>
+    </div>
+  </div>
+
+  <div class="draw">
+    <div>
+      <h3>不知道读什么？让它替你翻一页</h3>
+      <p class="note">点一下，抽一个小任务。抽到不想做的，就再抽一次。</p>
+      <div class="draw-actions">
+        <button class="btn btn--mint btn--sm" id="pickBtn" type="button">替我抽一句</button>
+        <span class="note" id="pickCount">还没有抽过</span>
+      </div>
+    </div>
+    <div class="pick" id="pickCard"><span class="empty">点一下按钮<br>抽一句话</span></div>
+  </div>
+  <span class="folio">06</span>
+</section>
+
+<!-- ===== 视图 07：小提醒 ===== -->
+<section class="view" data-title="小提醒" aria-label="小提醒">
+  <div class="split split--rev">
+    <div class="split-text">
+      <span class="kicker">来之前，顺手记一下</span>
+      <h2 class="h2">几件<span class="hl">很小的事</span></h2>
+      <p class="lead">都不是规矩，只是让这个下午更舒服一点的办法。</p>
+      <div class="tips">
+        <div class="tip">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9l5 6M21 9l-5 6"/></svg>
+          </div>
+          <div><h3>说话放轻一点</h3><p>二楼是阅读区，聊天可以挪到楼梯口。</p></div>
+        </div>
+        <div class="tip">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <div><h3>手机翻过来放</h3><p>静读的时候，把屏幕朝下扣在桌上，会读得进去很多。</p></div>
+        </div>
+        <div class="tip">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 8h9v7a4.5 4.5 0 0 1-4.5 4.5h0A4.5 4.5 0 0 1 6 15z"/><path d="M15 9.5h2a2 2 0 0 1 0 4h-2"/></svg>
+          </div>
+          <div><h3>带个水杯</h3><p>慢慢喝水，慢慢读，一个下午会过得很舒服。</p></div>
+        </div>
+        <div class="tip">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l4 2 4 8-3 6H7L4 14l4-8 4-2z"/><path d="M12 4v16"/></svg>
+          </div>
+          <div><h3>带一件外套</h3><p>靠窗的位置下午会有风，坐着不动会有点凉。</p></div>
+        </div>
+        <div class="tip">
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13" r="3.2"/></svg>
+          </div>
+          <div><h3>拍照先问一声</h3><p>镜头里有别人的时候，先问问对方方不方便。</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="split-visual">
+      <figure class="shot shot--43">
+        <img src="assets/window-sill.jpg" alt="窗台上摆着插在陶罐里的几枚书签、含猫咪形状的小多肉、摊开的笔记本和小闹钟，窗外是校园树影" width="1500" height="1000">
+        <figcaption>窗台上的小角落，路过可以看一眼</figcaption>
+      </figure>
+    </div>
+  </div>
+  <span class="folio">07</span>
+</section>
+
+<!-- ===== 视图 08：回执 ===== -->
+<section class="view" data-title="写下名字" aria-label="写下名字">
+  <span class="kicker">最后，一张回执卡</span>
+  <h2 class="h2">来吗？<span class="hl">在卡上写下你的名字</span></h2>
+  <p class="lead">写好后点一下按钮，这张卡就盖上章——当作我们之间的一个约定。</p>
+
+  <div class="rsvp">
+    <div class="form">
+      <div class="field" id="nameField">
+        <label for="guestName">你的名字</label>
+        <input id="guestName" type="text" maxlength="12" placeholder="写在这张卡上" autocomplete="off" enterkeyhint="done">
+        <p class="msg" id="nameMsg"></p>
+      </div>
+      <div class="field">
+        <label>那天会带书来吗</label>
+        <div class="chips" id="bookChips">
+          <button class="chipbtn" type="button" data-book="带一本书" aria-pressed="false">带一本书</button>
+          <button class="chipbtn" type="button" data-book="先空手来" aria-pressed="false">先空手来</button>
+          <button class="chipbtn" type="button" data-book="还没想好" aria-pressed="true">还没想好</button>
+        </div>
+      </div>
+      <button class="btn" id="stampTicketBtn" type="button">盖个章，算你来过</button>
+      <p class="note" style="margin-top:12px">这张卡只在你自己的浏览器里生成，不会提交到任何地方，关掉网页就没了。</p>
+    </div>
+
+    <div class="ticket" id="ticket">
+      <div class="t-head"><h3>读书日 · 回执卡</h3><span>2026.11.17</span></div>
+      <div class="name-line" id="ticketName">————</div>
+      <div class="t-row"><span>地点</span><b>图书馆二楼</b></div>
+      <div class="t-row"><span>带书</span><b id="ticketBook">还没想好</b></div>
+      <div class="t-row"><span>组织人</span><b>铃铃铃玲</b></div>
+      <p class="empty-hint" id="ticketHint">写下名字再点按钮，右下角会出现一枚章。</p>
+      <div class="seal">读书日<br>已盖章</div>
+    </div>
+  </div>
+
+  <div class="end-sign">
+    <span class="sig">到时候见</span>
+    <span class="date">—— 铃铃铃玲 · 2026 年 11 月 17 日 · 成都艺术职业大学图书馆二楼</span>
+    <button class="btn btn--ghost btn--sm" id="backCover" type="button">回到封面</button>
+  </div>
+
+  <figure class="shot shot--169 end-shot">
+    <img src="assets/night-cat-sleep.jpg" alt="夜晚书桌上，橘猫把脸埋在摊开的书页上睡着，台灯亮着，窗外有星星" width="1600" height="900">
+  </figure>
+  <p class="site-note">网页是邀请函，不占座位。来不了也不用特地说明，书可以下次再换。插画为本次活动邀请绘制。</p>
+  <span class="folio">08</span>
+</section>
+</div>
+
+<!-- ===== 底部翻页条 ===== -->
+<nav class="nav" aria-label="翻页">
+  <button class="nav-btn" id="prevBtn" type="button" aria-label="上一页">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="nav-mid" id="tocBtn" type="button" aria-haspopup="dialog">目录 <span class="nav-count"><span id="curNum">01</span> · <span>08</span></span></button>
+  <button class="nav-btn" id="nextBtn" type="button" aria-label="下一页">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+</nav>
+
+<!-- ===== 目录弹层 ===== -->
+<div class="toc" id="toc" role="dialog" aria-modal="true" aria-label="目录">
+  <div class="toc-card">
+    <div class="toc-head">
+      <h3>翻到哪一页</h3>
+      <button class="toc-close" id="tocClose" type="button" aria-label="关闭目录">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul class="toc-list" id="tocList"></ul>
+    <p class="note" style="margin-top:12px">也可以直接用键盘：← 上一页，→ 下一页。</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+  var total = views.length;
+  var cur = 0;
+  var pad2 = function (n) { return n < 10 ? '0' + n : String(n); };
+
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var curNum = document.getElementById('curNum');
+  var book = document.getElementById('book');
+  var toc = document.getElementById('toc');
+  var tocList = document.getElementById('tocList');
+  var tocBtn = document.getElementById('tocBtn');
+  var tocClose = document.getElementById('tocClose');
+  var toastEl = document.getElementById('toast');
+  var toastTimer = null;
+
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('is-show'); }, 2300);
+  }
+
+  /* ---------- 目录 ---------- */
+  views.forEach(function (view, i) {
+    var li = document.createElement('li');
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'toc-item';
+    b.innerHTML = '<span class="n">' + pad2(i + 1) + '</span><span class="t">' +
+      (view.dataset.title || '第 ' + (i + 1) + ' 页') + '</span>';
+    b.addEventListener('click', function () {
+      closeToc();
+      go(i);
+    });
+    li.appendChild(b);
+    tocList.appendChild(li);
+  });
+
+  function markToc() {
+    Array.prototype.forEach.call(tocList.children, function (li, i) {
+      li.firstChild.classList.toggle('is-cur', i === cur);
+    });
+  }
+
+  /* ---------- 翻页 ---------- */
+  function syncChrome() {
+    curNum.textContent = pad2(cur + 1);
+    prevBtn.disabled = cur === 0;
+    nextBtn.disabled = cur === total - 1;
+    markToc();
+  }
+
+  function go(n, opts) {
+    opts = opts || {};
+    if (typeof n !== 'number' || n < 0 || n > total - 1) return;
+    if (n === cur && !opts.force) return;
+    var dir = n > cur ? 1 : -1;
+    cur = n;
+    views.forEach(function (v, i) {
+      v.classList.remove('is-active', 'is-back');
+      if (i === cur) {
+        if (dir < 0) v.classList.add('is-back');
+        void v.offsetWidth;
+        v.classList.add('is-active');
+      }
+    });
+    syncChrome();
+    window.scrollTo(0, 0);
+    if (history.replaceState) history.replaceState(null, '', '#p' + (cur + 1));
+    if (opts.toastMsg) toast(opts.toastMsg);
+  }
+
+  prevBtn.addEventListener('click', function () { go(cur - 1); });
+  nextBtn.addEventListener('click', function () { go(cur + 1); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    if (e.key === 'Escape' && toc.classList.contains('is-open')) { closeToc(); return; }
+    if (e.key === 'ArrowLeft') { go(cur - 1); }
+    if (e.key === 'ArrowRight') { go(cur + 1); }
+  });
+
+  /* ---------- 触摸滑动 ---------- */
+  var startX = 0, startY = 0, tracking = false;
+  book.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) return;
+    tracking = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  book.addEventListener('touchend', function (e) {
+    if (!tracking) return;
+    tracking = false;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - startX;
+    var dy = t.clientY - startY;
+    if (Math.abs(dx) > 64 && Math.abs(dx) > Math.abs(dy) * 1.6) {
+      if (dx < 0) go(cur + 1); else go(cur - 1);
+    }
+  }, { passive: true });
+
+  /* ---------- 目录开关 ---------- */
+  function openToc() {
+    toc.classList.add('is-open');
+    tocClose.focus();
+  }
+  function closeToc() {
+    toc.classList.remove('is-open');
+    tocBtn.focus();
+  }
+  tocBtn.addEventListener('click', openToc);
+  tocClose.addEventListener('click', closeToc);
+  toc.addEventListener('click', function (e) {
+    if (e.target === toc) closeToc();
+  });
+
+  /* ---------- 封面盖章 ---------- */
+  var stampBtn = document.getElementById('stampBtn');
+  stampBtn.addEventListener('click', function () {
+    stampBtn.classList.remove('is-pressed');
+    void stampBtn.offsetWidth;
+    stampBtn.classList.add('is-pressed');
+    stampBtn.querySelector('small').textContent = '已盖好';
+    toast('章盖好了 · 11 月 17 日，图书馆二楼见');
+  });
+
+  /* ---------- 活动卡翻面 ---------- */
+  var flip = document.getElementById('factFlip');
+  var flipBtn = document.getElementById('flipBtn');
+  flipBtn.addEventListener('click', function () {
+    var back = !flip.classList.contains('is-back');
+    flip.classList.toggle('is-back', back);
+    flipBtn.setAttribute('aria-pressed', back ? 'true' : 'false');
+    flipBtn.textContent = back ? '翻回正面' : '翻到背面';
+    toast(back ? '背面是一句写给你的话' : '翻回正面');
+  });
+
+  /* ---------- 抽一句话 ---------- */
+  var PICK_POOL = [
+    '翻到第 17 页，读第一句话',
+    '读一本封面是绿色的书',
+    '把正在读的那段，念给旁边的人听',
+    '选一本你只看过简介的书',
+    '读十分钟，只看图',
+    '找一本比你年纪大的书',
+    '读一首诗，然后合上',
+    '读一段你一直跳过的序',
+    '随便翻开一页，读三行',
+    '读一本你曾经讨厌过的书的第一章',
+    '读一本别人推荐过、你一直没读的',
+    '读出声，轻轻的'
+  ];
+  var pickBtn = document.getElementById('pickBtn');
+  var pickCard = document.getElementById('pickCard');
+  var pickCount = document.getElementById('pickCount');
+  var lastPick = -1;
+  var pickTimes = 0;
+
+  pickBtn.addEventListener('click', function () {
+    var i = lastPick;
+    while (PICK_POOL.length > 1 && i === lastPick) {
+      i = Math.floor(Math.random() * PICK_POOL.length);
+    }
+    lastPick = i;
+    pickTimes += 1;
+    pickCard.innerHTML = '<span>' + PICK_POOL[i] + '</span>';
+    pickCard.classList.remove('is-pop');
+    void pickCard.offsetWidth;
+    pickCard.classList.add('is-pop');
+    pickCount.textContent = '已经抽了 ' + pickTimes + ' 次';
+  });
+
+  /* ---------- 回执卡 ---------- */
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#bookChips .chipbtn'));
+  var bookChoice = '还没想好';
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      chip.setAttribute('aria-pressed', 'true');
+      bookChoice = chip.dataset.book || '还没想好';
+    });
+  });
+
+  var guestInput = document.getElementById('guestName');
+  var nameField = document.getElementById('nameField');
+  var nameMsg = document.getElementById('nameMsg');
+  var ticket = document.getElementById('ticket');
+  var ticketName = document.getElementById('ticketName');
+  var ticketBook = document.getElementById('ticketBook');
+  var ticketHint = document.getElementById('ticketHint');
+  var stampTicketBtn = document.getElementById('stampTicketBtn');
+
+  function stampTicket() {
+    var name = guestInput.value.replace(/^\s+|\s+$/g, '').replace(/\s+/g, ' ');
+    if (!name) {
+      nameField.classList.add('is-warn');
+      nameMsg.textContent = '先写个名字吧，随便写一个都行。';
+      guestInput.focus();
+      toast('卡上还空着，等你写名字');
+      return;
+    }
+    if (name.length > 12) name = name.slice(0, 12);
+    nameField.classList.remove('is-warn');
+    nameMsg.textContent = '';
+    ticketName.textContent = name;
+    ticketBook.textContent = bookChoice;
+    ticketHint.textContent = '2026 年 11 月 17 日 · 图书馆二楼，等你来。';
+    ticket.classList.remove('is-stamped');
+    void ticket.offsetWidth;
+    ticket.classList.add('is-stamped');
+    stampTicketBtn.textContent = '重新盖一次章';
+    toast('已盖章 · ' + name + '，11.17 见');
+  }
+
+  stampTicketBtn.addEventListener('click', stampTicket);
+  guestInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); stampTicket(); }
+  });
+  guestInput.addEventListener('input', function () {
+    nameField.classList.remove('is-warn');
+    nameMsg.textContent = '';
+  });
+
+  /* ---------- 回到封面 ---------- */
+  document.getElementById('backCover').addEventListener('click', function () { go(0); });
+
+  /* ---------- 初始化 ---------- */
+  var hashMatch = (location.hash || '').match(/#p(\d+)/);
+  var start = hashMatch ? Math.min(Math.max(parseInt(hashMatch[1], 10) - 1, 0), total - 1) : 0;
+  cur = start;
+  views.forEach(function (v, i) { v.classList.toggle('is-active', i === cur); });
+  syncChrome();
+})();
+</script>
+</body>
+</html>
